@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTNL - Mahanagar Telephone Nigam Ltd. Mumbai</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <!-- Accessibility Options -->
@@ -24,30 +25,52 @@
         </div>
     </div>
     
-    <!-- Header -->
-    <header class="header">
-        <div class="container d-flex justify-between align-center">
-            <div class="logo">
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <!-- Top section with logo, search bar, and social icons -->
+        <div class="d-flex justify-between align-center header-top">
+            <div class="logo d-flex align-center">
                 <img src="/api/placeholder/50/50" alt="MTNL Logo">
                 <h1>Mahanagar Telephone Nigam Ltd. Mumbai</h1>
             </div>
-            
-            <div class="d-flex align-center">
-                <div class="header-links">
-                    <a href="#">About Us</a>
-                    <a href="#">Corporate Info</a>
-                    <a href="#">View & Pay Bill</a>
-                    <a href="#">Tenders</a>
-                    <a href="#">FTTH Policy</a>
-                </div>
-                
-                <form class="search-form">
-                    <input type="text" placeholder="Search...">
-                    <button type="submit">SEARCH</button>
-                </form>
+
+            <!-- Search bar -->
+            <form class="search-form">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- Bottom section with social icons (left) and navigation links (right) -->
+        <div class="d-flex justify-between align-center header-bottom">
+            <!-- Social Icons Section -->
+            <div class="social-icons d-flex">
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <img src="facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="#" class="social-icon" aria-label="Android App">
+                    <img src="android-icon.png" alt="Android App">
+                </a>
+                <a href="mailto:support@example.com" class="social-icon" aria-label="Email">
+                    <img src="email-icon.png" alt="Email">
+                </a>
+            </div>
+
+            <!-- Navigation Links Section -->
+            <div class="header-links d-flex">
+                <a href="#">About Us</a>
+                <a href="#">Corporate Info</a>
+                <a href="#">View & Pay Bill</a>
+                <a href="#">Tenders</a>
+                <a href="#">FTTH Policy</a>
             </div>
         </div>
-    </header>
+    </div>
+</header>
+
+
+
     
 <!-- Navigation -->
 <nav class="main-nav">
@@ -250,9 +273,9 @@
 
 
     
-    <main id="main-content">
-        <div class="container">
-            <!-- Banner -->
+<main id="main-content">
+    <div class="container">
+
             <!-- Banner -->
 <div class="banner">
     <div class="banner-slider">
@@ -344,26 +367,48 @@
                 </div>
             </section>
             
-            <!-- News & Updates -->
             <section class="news-section">
-                <div class="section-header">
-                    <h2>What's New</h2>
+                <!-- Tab Headings -->
+                <div class="news-tabs">
+                    <h2 class="news-tab active" data-tab="whatsnew">What's New</h2>
+                    <h2 class="news-tab" data-tab="directory">Directory Search</h2>
+                    <h2 class="news-tab" data-tab="lease">Lease / Sale of Spaces</h2>
+                    <h2 class="news-tab" data-tab="training">Training Centre</h2>
+                    <h2 class="news-tab" data-tab="tenders">Current Tenders</h2>
                 </div>
-                
-                <div class="news-item">
-                    <div class="news-date">October 2022</div>
-                    <div class="news-title">VCC Card Refund Notice</div>
-                    <div class="news-desc">Customers having VCC card can visit nearest MTNL, Mumbai customer service center to get refund of the balance amount.</div>
+            
+                <!-- Tab Contents -->
+                <div class="news-content" id="whatsnew">
+                    <div class="news-item">
+                        <div class="news-date">October 2022</div>
+                        <div class="news-title">VCC Card Refund Notice</div>
+                        <div class="news-desc">Customers having VCC card can visit nearest MTNL, Mumbai customer service center to get refund of the balance amount.</div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">September 2022</div>
+                        <div class="news-title">3G Prepaid Voucher STV 485</div>
+                        <div class="news-desc">MTNL, Mumbai introducing 3G Prepaid Voucher STV 485 for 90 days validity with free 3G data of 1.5GB/day, Unlimited Voice Calling, & 100 SMS/day.</div>
+                        <a href="#" class="news-link">Click here to know more like such 3G Vouchers</a>
+                    </div>
                 </div>
-                
-                <div class="news-item">
-                    <div class="news-date">September 2022</div>
-                    <div class="news-title">3G Prepaid Voucher STV 485</div>
-                    <div class="news-desc">MTNL, Mumbai introducing 3G Prepaid Voucher STV 485 for 90 days validity with free 3G data of 1.5GB/day, Unlimited Voice Calling, & 100 SMS/day.</div>
-                    <a href="#" class="news-link">Click here to know more like such 3G Vouchers</a>
+            
+                <div class="news-content" id="directory" style="display: none;">
+                    <p>Directory content goes here.</p>
+                </div>
+                <div class="news-content" id="lease" style="display: none;">
+                    <p>Lease / Sale of Spaces content goes here.</p>
+                </div>
+                <div class="news-content" id="training" style="display: none;">
+                    <p>Training Centre content goes here.</p>
+                </div>
+                <div class="news-content" id="tenders" style="display: none;">
+                    <p>Current Tenders content goes here.</p>
                 </div>
             </section>
             
+                     
+            
+
             <!-- Security Notice -->
             <div class="security-notice">
                 <div class="security-icon">🛡️</div>
